@@ -18,7 +18,7 @@ import ir.mirrajabi.searchdialog.core.Searchable;
  */
 
 public class SimpleSearchFilter<T extends Searchable> extends BaseFilter {
-	private final float mAccuracyPercentage;
+	private float mAccuracyPercentage;
 	private ArrayList<T> mItems;
 	private FilterResultListener mFilterResultListener;
 	private boolean mCheckLCS;
@@ -92,4 +92,12 @@ public class SimpleSearchFilter<T extends Searchable> extends BaseFilter {
 		mFilterResultListener.onFilter(filtered);
 		doAfterFiltering();
 	}
+	
+	public float getmAccuracyPercentage() {
+        	return mAccuracyPercentage;
+    	}
+
+    	public void setmAccuracyPercentage(float mAccuracyPercentage) {
+        	this.mAccuracyPercentage = mAccuracyPercentage;
+    	}
 }
